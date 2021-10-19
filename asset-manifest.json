@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/test_case_generator/static/js/main.cd0c2ca6.chunk.js",
+    "main.js.map": "/test_case_generator/static/js/main.cd0c2ca6.chunk.js.map",
+    "runtime-main.js": "/test_case_generator/static/js/runtime-main.4975fc9c.js",
+    "runtime-main.js.map": "/test_case_generator/static/js/runtime-main.4975fc9c.js.map",
+    "static/js/2.3a6fc52f.chunk.js": "/test_case_generator/static/js/2.3a6fc52f.chunk.js",
+    "static/js/2.3a6fc52f.chunk.js.map": "/test_case_generator/static/js/2.3a6fc52f.chunk.js.map",
+    "index.html": "/test_case_generator/index.html",
+    "static/js/2.3a6fc52f.chunk.js.LICENSE.txt": "/test_case_generator/static/js/2.3a6fc52f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4975fc9c.js",
+    "static/js/2.3a6fc52f.chunk.js",
+    "static/js/main.cd0c2ca6.chunk.js"
+  ]
+}
