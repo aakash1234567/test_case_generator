@@ -391,7 +391,7 @@ var Data = [
         var m = Math.floor(
           Math.random() * (data.high_m - data.low_m) + data.low_m
         );
-        var k = kath.floor(
+        var k = Math.floor(
           Math.random() * (data.high_k - data.low_k) + data.low_k
         );
         arr.push(n);
@@ -465,27 +465,25 @@ var Data = [
     Gen: (state) => {
       var ans = [];
       var data = state.filter((d) => d.id == 6)[0];
-      ans.push(data.t);
+      const n = Math.floor(
+        Math.random() * (data.high_n - data.low_n) + data.low_n
+      );
+      const m = Math.floor(
+        Math.random() * (data.high_m - data.low_m) + data.low_m
+      );
+      ans.push(n);
+      ans.push(" ");
+      ans.push(m);
       ans.push(<br />);
-      for (let i = 0; i < data.t; i++) {
-        const n = Math.floor(
-          Math.random() * (data.high_n - data.low_n) + data.low_n
-        );
-        const m = Math.floor(
-          Math.random() * (data.high_m - data.low_m) + data.low_m
-        );
+      for (let j = 0; j < n; j++) {
         var arr = [];
-        for (let j = 0; j < n; j++) {
+        for (let k = 0; k < m; k++) {
           arr.push(
             Math.floor(
               Math.random() * (data.high_ai - data.low_ai) + data.low_ai
             )
           );
         }
-        ans.push(n);
-        ans.push(" ");
-        ans.push(m);
-        ans.push(<br />);
         if (data.ar === "true") {
           ans.push(arr.join(" "));
         } else {
@@ -493,6 +491,7 @@ var Data = [
         }
         ans.push(<br />);
       }
+      console.log(ans, "check");
       return ans;
     },
     content: (state, dispatch) => (
@@ -583,13 +582,15 @@ var Data = [
           case_id={7}
           dispatch={dispatch}
         />
-        <div className="row">
-          <div className="col-4"> Characters: </div>
-          <div className="col-4">
+        <div className="mb-3 row">
+          <label className="col-sm-4 col-form-label" htmlFor="chr">
+            Characters:
+          </label>
+          <div className="col-sm-5">
             <input
               type="text"
               id="chr"
-              className="chr"
+              className="chr form-control"
               value={state.filter((d) => d.id == 7)[0].chr}
               placeholder="Enter space separated characters"
               onChange={(e) => {

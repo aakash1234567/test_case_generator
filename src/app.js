@@ -1,6 +1,5 @@
 import {
   Feedback,
-  Exit,
   AnotherType,
   Generate,
   Home,
@@ -13,7 +12,7 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 const App = () => {
   const [isScreen, setIsScreen] = useState(1);
-  const [showContent, setShowContent] = useState([]);
+  const [showContent, setShowContent] = useState({ content: "" });
   const [showOutput, setShowOutput] = useState([]);
   const store = useSelector((store) => store);
   const dispatch = useDispatch();
@@ -55,9 +54,6 @@ const App = () => {
               <div className="col" id="buttons">
                 <Feedback />
               </div>
-              <div className="col" id="buttons">
-                <Exit />
-              </div>
             </div>
           </div>
         </div>
@@ -96,16 +92,13 @@ const App = () => {
                   }}
                 />
               </div>
-              <div className="col" id="buttons">
-                <Exit />
-              </div>
             </div>
           </div>
         </div>
       ) : (
         <div className="container" id="content">
-          <div className="row">
-            <div className="col">{showContent.content(store, dispatch)}</div>
+          <div className="row" id="inps">
+            <div className="col-8">{showContent.content(store, dispatch)}</div>
             <div className="col-4">
               <div className="col" id="buttons">
                 <Home
@@ -116,9 +109,6 @@ const App = () => {
               </div>
               <div className="col" id="buttons">
                 <Generate handleGen={() => Generator()} />
-              </div>
-              <div className="col" id="buttons">
-                <Exit />
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 * {
   color: whitesmoke;
+  font-family: "Signika Negative", sans-serif;
 }
 body {
   background-color: black;
@@ -13,7 +14,10 @@ body {
   text-align: center;
   display: block;
   color: yellow;
-  margin-top: 7%;
+  margin-top: 3vh;
+}
+#inps {
+  margin-top: 3vh;
 }
 
 #content {
@@ -24,7 +28,7 @@ body {
 
 button,
 sub {
-  color: blue;
+  color: black;
 }
 p > sub {
   color: whitesmoke;
@@ -38,4 +42,16 @@ p > sub {
 input {
   width: 100%;
   color: black;
+}
+#btncopy:not(:focus) #svgcopy {
+  display: none;
+}
+#btncopy:focus #svgcopy {
+  display: block;
+}
+#case_desc {
+  height: fit-content;
+  width: 10em;
+  margin: 1em;
+  background-color: darkgray;
 }

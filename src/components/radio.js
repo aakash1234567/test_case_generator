@@ -8,13 +8,28 @@ const Radio = (props) => {
         props.dispatch(changeDataReducer(e, props.case_id));
       }}
     >
-      <div className="col-3">
-        <input type="radio" name="ar" value={true} />
-        <label htmlFor="rad1">1 2 3 ... N</label>
+      <div className="col-3 form-check">
+        <input
+          type="radio"
+          name="ar"
+          value={true}
+          className="form-check-input"
+        />
+        <label htmlFor="rad1" className="form-check-label">
+          1 2 3 ... N
+        </label>
       </div>
-      <div className="col-3">
-        <input type="radio" name="ar" value={false} defaultChecked />
-        <label htmlFor="rad2">[1, 2, 3, ... ,N]</label>
+      <div className="col-3 form-check">
+        <input
+          type="radio"
+          name="ar"
+          value={false}
+          defaultChecked
+          className="form-check-input"
+        />
+        <label htmlFor="rad2" className="form-check-label">
+          [1, 2, 3, ... ,N]
+        </label>
       </div>
     </div>
   );

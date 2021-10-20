@@ -9,6 +9,7 @@ const Cases = (props) => {
             onClick={(e) => props.handleClick(e.target.value)}
             key={c.id}
             value={c.id}
+            id="case_desc"
           >
             {c.desc}
           </button>
