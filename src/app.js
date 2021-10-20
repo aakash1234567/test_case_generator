@@ -23,7 +23,6 @@ const App = () => {
   const Generator = () => {
     var arr = showContent.Gen(store);
     setShowOutput(arr);
-    console.log(arr);
     setIsScreen(3);
   };
   const ReGen = () => {
@@ -32,10 +31,8 @@ const App = () => {
   };
   const Cpy = () => {
     var copyText = document.getElementById("output");
-    console.log(copyText.innerHTML);
     var cnt = copyText.innerHTML;
     cnt = cnt.replaceAll("<br>", "\n");
-    console.log(cnt);
     navigator.clipboard.writeText(cnt);
   };
   return (

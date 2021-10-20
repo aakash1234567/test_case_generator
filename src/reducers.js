@@ -491,7 +491,6 @@ var Data = [
         }
         ans.push(<br />);
       }
-      console.log(ans, "check");
       return ans;
     },
     content: (state, dispatch) => (
@@ -609,7 +608,6 @@ const handleChange = (state = Data, payload) => {
   var temp = state.map((d) => {
     if (d.id == id) {
       if (e.target.type === "radio") {
-        console.log("check", parseInt(e.target.value), typeof e.target.value);
         return {
           ...d,
           [e.target.name]: e.target.value,
@@ -631,7 +629,6 @@ const handleChange = (state = Data, payload) => {
       return d;
     }
   });
-  // console.log(temp);
   return temp;
 };
 

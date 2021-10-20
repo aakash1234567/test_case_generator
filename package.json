@@ -1,7 +1,6 @@
 {
   "name": "test_case_gen",
   "version": "1.0.0",
-  "homepage": "https://aakash1234567.github.io/test_case_generator",
   "description": "Test case generator for competitive programming",
   "main": "index.js",
   "scripts": {

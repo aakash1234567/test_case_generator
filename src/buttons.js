@@ -1,7 +1,21 @@
-const Feedback = () => <button className="btn btn-primary">Feedback</button>;
+const Feedback = () => (
+  <a
+    className="btn btn-primary"
+    href="https://github.com/aakash1234567/test_case_generator/issues/new/choose"
+    target="_blank"
+  >
+    Feedback
+  </a>
+);
 
 const AnotherType = () => (
-  <button className="btn btn-primary">Another Type of test case</button>
+  <a
+    className="btn btn-primary"
+    href="https://github.com/aakash1234567/test_case_generator/issues/new?assignees=&labels=&template=suggest-test-case.md&title=Suggest+Test+Case"
+    target="_blank"
+  >
+    Another Type of test case
+  </a>
 );
 
 const Home = (props) => (
